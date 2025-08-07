@@ -6,42 +6,38 @@
   <title>TurfBooking</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="turf.css">
+  <style>
+    
+  </style>
 </head>
 <body>
-  <div id="page">
-    <div id="main">
-      
-        <h1 class="h1">BOOK YOUR PLAY</h1>
-      
-      
-      <div id="butto" onclick="toggleSidebar()" class="profile-icon">
-       <img src="lines.png" alt="Menu">
-      </div>
-
-      <div id="sidebar" >
-        <div id="ids">
-          <a href="#home"><i class="fa fa-home"></i>Home</a><br>
-          <a href="#login"><i class="far fa-user"></i>Login</a><br>
-          <a href="#profile"><i class="fas fa-user"></i>Profile</a><br>
-          <a href="#signup"><i class="fas fa-sign-in-alt" style="font-size:24px; color: #317773;"></i>Signup</a><br>
-        </div>
-      </div>
+<div id="page">
+  <div id="main">
+    <h1 class="h1">BOOK YOUR PLAY</h1>
+    <div onclick="toggleSidebar()" class="profile-icon">
+      <img src="lines.png" alt="Menu">
     </div>
-
-    <div class="gallery-container" id="gallery">
-      <div class="images" id="imageTrack">
-        <img src="cruyff1.png" alt="1">
-        <img src="im2.jpg" alt="2">
-        <img src="img1.jpg" alt="3">
-        <img src="im3.jpg" alt="4">
-      </div>
+    <div id="sidebar">
+      <a href="#home"><i class="fa fa-home"></i> Home</a>
+      <a href="#login"><i class="far fa-user"></i> Login</a>
+      <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+      <a href="#signup"><i class="fas fa-sign-in-alt"></i> Signup</a>
     </div>
-    <div class="dots" id="dotsContainer"></div>
+  </div>
 
-    <h1 class="section-title">Available Turfs</h1>
+  <div class="gallery-container" id="gallery">
+    <div class="images" id="imageTrack">
+      <img src="cruyff1.png" alt="1">
+      <img src="im2.jpg" alt="2">
+      <img src="img1.jpg" alt="3">
+      <img src="im3.jpg" alt="4">
+    </div>
+  </div>
+  <div class="dots" id="dotsContainer"></div>
 
-    <div id="vertical">
-      <div class="turf-box" onclick="showForm()">
+  <h1 class="section-title">Available Turfs</h1>
+  <div id="vertical">
+     <div class="turf-box" onclick="showForm()">
         <img src="turf.png">
         <h3>Name: Nutmug</h3>
         <h3>Place: Madathil</h3>
@@ -69,23 +65,23 @@
         <h3>Time: 7AM to 11PM</h3>
         <h3>Rate: $800</h3>
       </div>
+  </div>
+  <div id="footer">
+    <div class="footer-left">
+      <h3>Contact Us</h3>
+      <p>📞 +91 99478 93663</p>
+      <p>📧 mubarakajmal0@gmail.com</p>
+      <p>📍 Kannur, Kerala, India</p>
     </div>
-
-    <div id="footer">
-      <div class="footer-left">
-        <h3>Contact Us</h3>
-        <p>📞 +91 99478 93663</p>
-        <p>📧 mubarakajmal0@gmail.com</p>
-        <p>📍 Kannur, Kerala, India</p>
-      </div>
-      <div class="footer-right">
-        <p>&copy; 2025 TurfPlay. All rights reserved.</p>
-      </div>
+    <div class="footer-right">
+      <p>&copy; 2025 TurfPlay. All rights reserved.</p>
     </div>
   </div>
 
-  <div class="form-container" id="form" style="display: none;">
-    <h2>Book Your Turf</h2>
+  </div>
+
+  <div class="form-container" id="form" style="display:none;">
+   <h2>Book Your Turf</h2>
     <form id="bookingForm">
       <label for="name">Name</label>
       <input type="text" id="name" required>
@@ -123,22 +119,22 @@
   </div>
 
   <script>
+
     function showForm() {
       document.getElementById('page').style.display = "none";
       document.getElementById('form').style.display = "block";
     }
 
     function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('sidebar').classList.toggle('active');
     }
     document.addEventListener('click', function (e) {
-    const sidebar = document.getElementById('sidebar');
-    const button = document.getElementById('butto');
-    if (!sidebar.contains(e.target) && !button.contains(e.target)) {
-    sidebar.classList.remove('active');
-    }
+      const sidebar = document.getElementById('sidebar');
+      const button = document.querySelector('.profile-icon');
+      if (!sidebar.contains(e.target) && !button.contains(e.target)) {
+        sidebar.classList.remove('active');
+      }
     });
-
 
     const images = document.querySelectorAll(".images img");
     const track = document.getElementById("imageTrack");
@@ -152,7 +148,6 @@
       if (i === 0) dot.classList.add("active");
       dotsContainer.appendChild(dot);
     }
-
     const dots = document.querySelectorAll(".dot");
 
     function updateGallery(index) {
