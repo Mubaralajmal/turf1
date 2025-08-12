@@ -107,8 +107,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 5px;
-      padding: 0px;
+      gap: 15px;
+      padding: 5px;
     }
     .deta {
       margin-top: -28px;
@@ -124,7 +124,7 @@
       background-color: #000000;
       color: #fff3f3;
       width: 100%;
-      max-width: 350px;
+      max-width: 400px;
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -202,6 +202,7 @@
         text-align: left;
       }
     }  
+
 
 
 
