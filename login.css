@@ -4,7 +4,7 @@ body {
 .login-container {
   width: 80%;
   max-width: 350px;
-  margin: 60px auto;
+  margin: 190px auto;
   padding: 30px 25px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -79,4 +79,5 @@ body {
 
 .signup-text a:hover {
   text-decoration: underline;
+
 }
