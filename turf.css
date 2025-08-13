@@ -107,8 +107,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
-      padding: 5px;
+      gap: 10px;
+      padding: 0px;
     }
     .deta {
       margin-top: -28px;
@@ -123,8 +123,9 @@
     .turf-box {
       background-color: #000000;
       color: #fff3f3;
-      width: 100%;
-      max-width: 400px;
+      border: 1px solid #444;
+      width: 99%;
+      max-width: 350px;
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -136,11 +137,14 @@
       transform: scale(1.05);
     }
     .turf-box img {
-      width: 40%;
-      height: 100px;
+      width: 30%;
+      height: 90px;
       margin: 5px;
       object-fit: cover;
       border-radius: 8px;
+    }
+    .mar {
+      margin-bottom: -10px;
     }
     .form-container {
       background-color: #fff;
@@ -203,8 +207,3 @@
         text-align: left;
       }
     }  
-
-
-
-
-
