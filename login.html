@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turf Booking - Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1 class="title">Turf Booking Login</h1>
+    <form id="loginForm" action="#" method="POST" class="login-form">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="button" class="btn" onclick="log()">Login</button>
+
+      <p class="signup-text">Don't have an account? <a href="">Sign up</a></p>
+    </form>
+  </div>
+
+  <script>
+  function log() {
+    const form = document.getElementById('loginForm');
+    if (form.checkValidity()) {
+      // form is valid, open next page
+      window.open("turf booking final.html", "_blank");
+    } else {
+      // form is invalid, show browser validation UI
+      form.reportValidity();
+    }
+  }
+</script>
+</body>
+</html>
